@@ -3,6 +3,7 @@
 **Вектор:** Source Code Leaks ➔ PHP Insecure Deserialization ➔ CVE-2021-3493 (LPE)
 *   **OS:** 🐧 Linux (Ubuntu)
 *   **Сложность:** 🟡 Средняя
+*   **Инструменты:** 🧰 `arp-scan` `nmap` `gobuster` `msfvenom` `msfconsole`
 *   **Ключевые навыки:** 📊 Анализ PHP-кода, создание кастомных эксплойтов для десериализации.
 
 ## 🔍 Разведка
@@ -45,7 +46,7 @@ echo "Tzo0OiJVc2VyIjoyOntzOjEwOiIAVXNlcgBuYW1lIjtzOjM6InNrNCI7czo5OiIAVXNlcgB3ZW
 
 Чуть-чуть лишнего убрали: `%3D`. Мы видим пользователя `sk4` и ещё инструкции.
 
-### 🌐 Веб-анализ
+## 🌐 Веб-анализ
 
 Давайте ещё профаззим директории:
 
@@ -200,7 +201,7 @@ find / -perm -4000 -type f 2>/dev/null
 
 ![info_system_serial1](screenshots/info_system_serial1.png)
 
-### 🌋 Эскалация привелегий
+## 🌋 Эскалация привелегий
 
 Чтобы долго что-то не искать, давайте скачаем с нашей Kali `linpeas.sh` и запустим его:
 
